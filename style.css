@@ -1,0 +1,8 @@
+.img-thumbnail{
+    min-width:15vh;
+    max-width:15vh;
+    max-height:20vh;
+    object-fit:contain;
+    margin-left:5vh;
+    border-radius:20px;
+}
