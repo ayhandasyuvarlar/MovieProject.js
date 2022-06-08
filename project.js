@@ -32,7 +32,7 @@ function addFilm(e) {
     const textarea = textareaElement.value
     const date = dateElement.value
     if (title === "" || director === "" || url === "" || date === "" || subject === "" || textarea === "") {
-        ui.displayMessages("Tüm alanları doldurun", "danger")
+        ui.displayMessages("Fill in all fields", "danger")
     }
     else {
         //New Film
@@ -40,7 +40,7 @@ function addFilm(e) {
 
         storage.addFilmToStorage(newFilm)  //storage to add film
         ui.addFilmToUI(newFilm); // Frontend film add
-        ui.displayMessages("Film Başarıyla eklendi", "success")
+        ui.displayMessages("Movie succes added", "success")
     }
     ui.clearInput(titleElement, urlElement, directorElement, dateElement, subjectElement, textareaElement);
 
@@ -48,7 +48,7 @@ function addFilm(e) {
     e.preventDefault();
 }
 function clearAllFilms() {
-    if(confirm("Emin misiniz ?")){
+    if(confirm("Are you sure to delete all movies??")){
       ui.clearAllFilmsFromUI();
       storage.clearAllFilmsFromStorage();
     }
